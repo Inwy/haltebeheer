@@ -42,7 +42,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Our apps
+    'stopmanagement',
+
+    # Libs
     'leaflet',
+    'south',
+    'floppyforms',
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -64,7 +72,7 @@ WSGI_APPLICATION = 'haltebeheer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'HOST': '',
         'NAME': 'haltebeheer',
         'USER': 'haltebeheer',
