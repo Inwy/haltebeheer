@@ -1,15 +1,15 @@
 {% extends "base.html" %}
-{% load i18n leaflet_tags %}
+{% load i18n leaflet_tags staticfiles %}
 
 
 {% block title %}Haltes{% endblock %}
 
 {% block extra_css %}
-    {% leaflet_css %}
+    {% leaflet_css plugins="geosearch" %}
 {% endblock %}
 
 {% block extra_js %}
-    {% leaflet_js %}
+    {% leaflet_js plugins="geosearch" %}
 {% endblock %}
 
 {% block js_init %}
@@ -17,6 +17,17 @@
     $("#map").css( { margin : "-20px 0px 0px -150px" } );
     $( window ).resize(function() {
         $("#map").height($(window).height() - 50).width($(window).width());
+    });
+
+    $(window).on('map:init', function (e) {
+        var detail = e.originalEvent ?
+                     e.originalEvent.detail : e.detail;
+        var map = detail.map;
+
+        new L.Control.GeoSearch({
+            provider: new L.GeoSearch.Provider.OpenStreetMap(),
+            showMarker: true
+        }).addTo(map);
     });
 {% endblock %}
 

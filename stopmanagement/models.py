@@ -5,7 +5,6 @@ class StopPlace(models.Model):
     name = models.CharField(max_length=50)
     owner = models.CharField(max_length=50)
     region = models.CharField(max_length=50)
-    location = models.PointField()
 
     objects = models.GeoManager()
 
@@ -16,7 +15,7 @@ class StopPlace(models.Model):
     pass
 
 class Quay(models.Model):
-    code = models.CharField(max_length=10, unique=True)
+    code = models.CharField(max_length=15, unique=True)
     name = models.CharField(max_length=50)
     location = models.PointField()
 

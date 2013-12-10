@@ -110,3 +110,21 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+
+# Configure the leaflet maps
+LEAFLET_CONFIG = {
+    # 53.554260, 7.227610, 50.750450, 3.358330
+    'SPATIAL_EXTENT': (7.227610, 53.554260, 3.358330, 50.750450),
+    'PLUGINS': {
+        'geosearch': {
+            'css': 'css/l.geosearch.css',
+            'js': ['js/l.control.geosearch.js', 'js/l.geosearch.provider.openstreetmap.js'],
+            'auto-include': False,
+        },
+        'sidebar': {
+            'css': 'css/L.Control.Sidebar.css',
+            'js': 'js/L.Control.Sidebar.js',
+            'auto-include': False,
+        },
+    }
+}
