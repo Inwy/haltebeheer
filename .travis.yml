@@ -1,9 +1,11 @@
 language: python
+
 python:
   - "2.7"
   - "3.2"
   - "3.3"
-  env:
+
+env:
     - DJANGO=Django==1.5.5 DB=postgres
     - DJANGO=https://github.com/django/django/tarball/stable/1.6.x DB=postgres
     - DJANGO=https://github.com/django/django/tarball/master DB=postgres
@@ -11,7 +13,9 @@ python:
 install:
   - pip install -r requirements.txt --use-mirrors
   - pip install coverage coveralls $DJANGO --use-mirrors
+
 script:
   - coverage run -a setup.py test
+
 after_success:
   - coveralls
