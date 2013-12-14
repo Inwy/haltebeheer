@@ -10,6 +10,8 @@ django-leaflet
 django-geojson
 django-braces
 django-simple-history
+python-dateutil
+django-tastypie
 
 # Dev
 django-debug-toolbar

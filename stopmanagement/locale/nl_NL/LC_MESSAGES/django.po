@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-14 00:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:15
+msgid "authority"
+msgstr "beheerder"
+
+#: models.py:16
+msgid "authorities"
+msgstr "beheerders"
+
+#: models.py:26
+msgid "town"
+msgstr "gemeente"
+
+#: models.py:27
+msgid "towns"
+msgstr "gemeenten"
+
+#: models.py:55
+msgid "stopplace"
+msgstr "stopplace"
+
+#: models.py:56
+msgid "stopplaces"
+msgstr "stopplaces"
+
+#: models.py:90
+msgid "quay"
+msgstr "halte"
+
+#: models.py:91
+msgid "quays"
+msgstr "haltes"
+
+#: templates/stopmanagement/nopermission.html:4
+#: templates/stopmanagement/nopermission.html:9
+msgid "Toegang geweigerd"
+msgstr "Toegang geweigerd"
+
+#: templates/stopmanagement/nopermission.html:10
+msgid ""
+"Je hebt geen toegang tot deze pagina of functionaliteit. Als je denkt dat "
+"dit onterecht is, vraag dan een beheerder voor meer informatie."
+msgstr ""
+"Je hebt geen toegang tot deze pagina of functionaliteit. Als je denkt dat "
+"dit onterecht is, vraag dan een beheerder voor meer informatie."
